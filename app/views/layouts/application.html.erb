@@ -11,13 +11,17 @@
     <%= javascript_importmap_tags %>
     <style>
       body {
-        width: 100vw;
         height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+      .header {
+        height: 20vh;
       }
       .homeMain {
-        height: 80%;
+        height: 80vh;
         background-image: url('<%= asset_path("home/homeImage.jpg") %>');
-        background-size:contain;
+        background-size: contain;
         background-repeat: no-repeat;
       }
     </style>
