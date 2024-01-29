@@ -9,11 +9,23 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+      }
+      .homeMain {
+        height: 80%;
+        background-image: url('<%= asset_path("home/homeImage.jpg") %>');
+        background-size:contain;
+        background-repeat: no-repeat;
+      }
+    </style>
   </head>
 
   <body>
     <%= render 'shared/header'  %>
-    <main class="container mx-auto mt-28 px-5 flex">
+    <main class="container mx-auto mt-28 px-5 flex bg-cover homeMain">
       <%= yield %>
     </main>
   </body>

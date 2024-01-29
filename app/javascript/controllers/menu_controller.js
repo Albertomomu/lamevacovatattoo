@@ -8,11 +8,6 @@ export default class extends Controller {
 
     menu.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
-      if (menuIcon.src === '<%= asset_path("icons/menu.svg") %>') {
-        menuIcon.src = '<%= asset_path("icons/close-menu.svg") %>';
-      } else {
-        menuIcon.src = '<%= asset_path("icons/menu.svg") %>';
-      }
     })
   }
 }
