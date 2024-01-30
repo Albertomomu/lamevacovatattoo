@@ -9,27 +9,38 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
     <style>
+      .metal-mania-regular {
+        font-family: "Metal Mania", system-ui;
+        font-weight: 400;
+        font-style: normal;
+      }
       body {
         height: 100vh;
         margin: 0;
         padding: 0;
+        display: flex;
+        flex-direction: column;
       }
       .header {
-        height: 20vh;
+        height: 20%;
       }
       .homeMain {
-        height: 80vh;
-        background-image: url('<%= asset_path("home/homeImage.jpg") %>');
+        height: 100%;
+        background-image: url('<%= asset_path("home/homeImage.png") %>');
         background-size: contain;
         background-repeat: no-repeat;
+        background-position: center;
       }
     </style>
   </head>
 
   <body>
     <%= render 'shared/header'  %>
-    <main class="container mx-auto mt-28 flex flex-col bg-cover homeMain">
+    <main class="container flex flex-col bg-cover homeMain">
       <%= yield %>
     </main>
   </body>
